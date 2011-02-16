@@ -50,8 +50,8 @@ module Sheepsafe
             notified = false
             loop do
               require 'open-uri'
-              length = open("http://example.com") {|f| f.meta['content-length'] } rescue nil
-              break if length == "3067" # successful contact w/ example.com
+              length = open("http://jordanbyron.com/sheepsafe.txt") {|f| f.meta['content-length'] } rescue nil
+              break if length == "41" # successful contact w/ example.com
               notify_warning("Waiting for internet connection before switching") unless notified
               notified = true
               sleep 5
